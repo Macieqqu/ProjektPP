@@ -6,5 +6,8 @@ void showMenu();
 void showEditMenu();
 void printList(List *list);
 void printObject(Przedmiot przedmiot);
+char *enumToString(Stabilnosc stabilnosc);
+Stabilnosc stringToEnum(char *string);
+void clearBuffer();
 
 #endif
