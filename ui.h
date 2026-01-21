@@ -12,5 +12,6 @@ void clearBuffer();
 Przedmiot getItemFromUser();
 int getMenuChoice(int max);
 void removeNewlineAndClean(char *string);
+int scanfInt();
 
 #endif

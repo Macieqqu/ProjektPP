@@ -11,6 +11,7 @@ void modifyItem(Node *target);
 // wyszukiwanie
 void searchByName(List *list, char *name);
 void searchByChaos(List *list, int chaos);
+Node *getFromID(List *list, long id);
 
 //sortowanie
 void sortAlphabetically(List *list);

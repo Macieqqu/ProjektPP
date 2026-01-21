@@ -50,6 +50,7 @@ void listRemove(List *list, long id) {
         }
         curr = currNext;
     }
+    printf("Nieznaleziono przedmiotu o podanym ID\n");
 }
 
 void listRemoveBelowChaos(List *list, int chaos) {
@@ -142,6 +143,18 @@ void searchByChaos(List *list, int chaos) {
         curr = curr->next;
     }
     if (!found) printf("Brak przedmiotów o poziomie chaosu: %i\n", chaos);
+}
+
+Node *getFromID(List *list, long id) {
+
+    Node *curr = list->head;
+    while (curr != NULL) {
+        if (curr->value.id == id) {
+            return curr;
+        }
+        curr = curr->next;
+    }
+    return NULL;
 }
 
 void sortAlphabetically(List *list) {

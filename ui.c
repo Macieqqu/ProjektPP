@@ -13,6 +13,7 @@ void showMenu() {
     printf("6. Wyszukaj wedlug poziomu chaosu\n");
     printf("7. Posortuj alfabetycznie\n");
     printf("8. Posortuj wedlug poziomu chaosu\n");
+    printf("9: Wyswietl liste\n");
     printf("0. Zakoncz program\n");
 }
 
@@ -103,6 +104,17 @@ int getMenuChoice(int max) {
     }
     clearBuffer();
     return wybor;
+}
+
+int scanfInt() {
+    int i;
+    while (scanf("%i", &i) != 1) {
+        printf("Niepoprawna wartość!\n");
+        printf("Podaj poprawną wartość: ");
+        clearBuffer();
+    }
+    clearBuffer();
+    return i;
 }
 
 void removeNewlineAndClean(char *str) {
