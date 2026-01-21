@@ -14,6 +14,7 @@ typedef enum {
 } Stabilnosc;
 
 typedef struct {
+    long id;
     char nazwa[MAX_NAZWA];
     char swiat[MAX_SWIAT];
     int poziomChaosu;
@@ -30,6 +31,7 @@ typedef struct Node {
 typedef struct List {
     Node *head;
     Node *tail;
+    long nextId;
 } List;
 
 #endif

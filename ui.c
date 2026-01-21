@@ -14,7 +14,6 @@ void showMenu() {
     printf("7. Posortuj alfabetycznie\n");
     printf("8. Posortuj wedlug poziomu chaosu\n");
     printf("0. Zakoncz program\n");
-    getMenuChoice(8);
 }
 
 void showEditMenu() {
@@ -25,7 +24,6 @@ void showEditMenu() {
     printf("4. Edytuj opis\n");
     printf("5. Edytuj stabilnosc\n");
     printf("0. Anuluj edytowanie\n");
-    getMenuChoice(5);
 }
 
 void printList(List *list) {
@@ -44,6 +42,7 @@ void printList(List *list) {
 
 void printObject(Przedmiot przedmiot) {
     printf("----------------------------------------------------");
+    printf("Id: %li\n", przedmiot.id);
     printf("Nazwa: %s\n", przedmiot.nazwa);
     printf("Swiat: %s\n", przedmiot.swiat);
     printf("Poziom chaosu: %i\n", przedmiot.poziomChaosu);
