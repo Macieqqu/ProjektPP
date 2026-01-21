@@ -1,15 +1,27 @@
 #include <stdio.h>
 
 #include "common.h"
+#include "file_util.h"
 #include "list.h"
 #include "ui.h"
 
-int main(void) {
+int main(int argc, char *argv[]) {
+
+    char *filename;
+
+    if (argc == 2) filename = argv[1];
+    else {
+        printf("Poprawne uzycie: %s <nazwa pliku>\n", argv[0]);
+        return 1;
+    }
 
     List lista;
     lista.nextId = 1;
     lista.head = NULL;
     lista.tail = NULL;
+
+    loadFile(filename, &lista);
+
     int running = 1;
 
     while (running) {
@@ -84,6 +96,7 @@ int main(void) {
             }
 
             case 0: {
+                saveFile(filename, &lista);
                 freeList(&lista);
                 running = 0;
                 break;

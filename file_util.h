@@ -2,7 +2,7 @@
 #define FILE_UTIL_H
 #include "common.h"
 
-List loadFile(char *fileName);
-int saveFile(char *fileName, List *list);
+void loadFile(char *fileName, List *list);
+void saveFile(char *fileName, List *list);
 
 #endif
