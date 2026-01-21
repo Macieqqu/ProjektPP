@@ -9,5 +9,8 @@ void printObject(Przedmiot przedmiot);
 char *enumToString(Stabilnosc stabilnosc);
 Stabilnosc stringToEnum(char *string);
 void clearBuffer();
+Przedmiot getItemFromUser();
+int getMenuChoice(int max);
+void removeNewlineAndClean(char *string);
 
 #endif
