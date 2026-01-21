@@ -129,7 +129,7 @@ void searchByName(List *list, char *name) {
         }
         curr = curr->next;
     }
-    if (!found) printf("Brak przedmiotów o nazwie: %s\n", name);
+    if (!found) printf("Brak przedmiotow o nazwie: %s\n", name);
 }
 
 void searchByChaos(List *list, int chaos) {
@@ -142,7 +142,7 @@ void searchByChaos(List *list, int chaos) {
         }
         curr = curr->next;
     }
-    if (!found) printf("Brak przedmiotów o poziomie chaosu: %i\n", chaos);
+    if (!found) printf("Brak przedmiotow o poziomie chaosu: %i\n", chaos);
 }
 
 Node *getFromID(List *list, long id) {

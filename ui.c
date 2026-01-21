@@ -8,7 +8,7 @@ void showMenu() {
     printf("1. Dodaj nowy przedmiot\n");
     printf("2. Edytuj przedmiot\n");
     printf("3. Usun przedmiot\n");
-    printf("4. Usun przedmiot poniżej danego poziomu chaosu\n");
+    printf("4. Usun przedmiot ponizej danego poziomu chaosu\n");
     printf("5. Wyszukaj wedlug nazwy\n");
     printf("6. Wyszukaj wedlug poziomu chaosu\n");
     printf("7. Posortuj alfabetycznie\n");
@@ -42,7 +42,7 @@ void printList(List *list) {
 }
 
 void printObject(Przedmiot przedmiot) {
-    printf("----------------------------------------------------");
+    printf("----------------------------------------------------\n");
     printf("Id: %li\n", przedmiot.id);
     printf("Nazwa: %s\n", przedmiot.nazwa);
     printf("Swiat: %s\n", przedmiot.swiat);
@@ -98,8 +98,8 @@ int getMenuChoice(int max) {
     int wybor;
     printf("Wybor: ");
     while (scanf("%i", &wybor) != 1 || wybor < 0 || wybor > max) {
-        printf("Niepoprawna wartość!\n");
-        printf("Podaj poprawną wartość: ");
+        printf("Niepoprawna wartosc!\n");
+        printf("Podaj poprawna wartosc: ");
         clearBuffer();
     }
     clearBuffer();
@@ -109,8 +109,8 @@ int getMenuChoice(int max) {
 int scanfInt() {
     int i;
     while (scanf("%i", &i) != 1) {
-        printf("Niepoprawna wartość!\n");
-        printf("Podaj poprawną wartość: ");
+        printf("Niepoprawna wartosc!\n");
+        printf("Podaj poprawna wartosc: ");
         clearBuffer();
     }
     clearBuffer();
